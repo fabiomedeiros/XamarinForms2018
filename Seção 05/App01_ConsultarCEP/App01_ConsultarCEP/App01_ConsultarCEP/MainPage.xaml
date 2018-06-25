@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--ContentPage página de conteúdo, particularidade só pode ter 1 elemento, para contornar colocamos stacklayout-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App01_ConsultarCEP"
+             x:Class="App01_ConsultarCEP.MainPage">
+
+    <!--Permite que possamos usar vários elementos filhos e empilha os elementos-->
+    
+    <!--Formatar margem aos elementos filhos -> Padding-->
+    <!--Formatar o espaçamento entre os elementos empilhados -> Spacing = 30-->
+    
+    <StackLayout BackgroundColor="#ffbf00" Padding="30" Spacing="30">
+        <!--Primeiro elemento image-->
+        
+        <!--Devemos colar a imagem em todos os acessíveis para cada plataforma-->
+        <!--Android -> Resources/drawable-->
+        <!--iOS -> Resources-->
+        <!--Windows -> Raiz(clicar no projeto e Ctr + v)-->
+                
+        <Image Source="logo_correios.png"></Image>
+        
+        <!--Segundo elemento Entry para o usuário digitar o cep-->
+        <Entry Placeholder="Digite o Cep" PlaceholderColor="#ffbf00" BackgroundColor="#ffffff" x:Name="E_Cep"> </Entry>
+        
+        <!--Terceiro elemento Botão-->
+        <Button Text="BUSCAR CEP" TextColor="#ffffff" BackgroundColor="#00416b" x:Name="B_Botao"></Button>
+        
+	<Label Text="" VerticalOptions="Center" HorizontalOptions="Center" x:Name="L_Resultado" />
+    </StackLayout>
+
+</ContentPage>
